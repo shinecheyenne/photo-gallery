@@ -10,21 +10,20 @@ body{
     justify-content: center;
     flex-direction: column;
     text-align: center;
-
 }
 
 #nav{
     position: fixed;
     height: 80px;
     display: flex;
-    justify-content:space-between;
+    justify-content:flex-end;
     align-items: center;
     z-index: 1;
     top: 0;
     left: 0;
     right: 0;
+    /* box-shadow: 1px 1px 1px lightgray; */
     background: white;
-    box-shadow: 1px 1px 1px lightgray;
 }
 
 #profile{
@@ -49,7 +48,7 @@ body{
 .bar{
     width: 30px;
     height: 2px;
-    background: rgb(29, 28, 28,0.9);;
+    background: rgb(29, 28, 28);
 }
 
 #menu:hover{
@@ -57,7 +56,13 @@ body{
 }
 
 #title{
-    margin-top: 150px;
+}
+
+h1{
+  margin-top: 150px;
+  color: black;
+  font-size: 3rem;
+
 }
 
 input{
@@ -83,21 +88,28 @@ input{
     #photos{
         column-count: 2;
     }
+    #side{
+      display: none;
+    }
 }
 
 @media screen and (max-width: 400px) {
     #photos{
         column-count: 1;
     }
+    #side{
+      display: none;
+    }
 }
 
 .photo{
     display: inline-block;
-    padding: 5px;
-    margin-bottom: 6px;
-    border: 1px solid lightgray;
-    border-radius: 3px;
-    box-shadow: 2px 2px 2px lightgray;
+    /* padding: 5px; */
+    /* margin-bottom: 6px; */
+    margin-bottom: 2px;
+    /* border: 1px solid lightgray; */
+    /* border-radius: 3px; */
+    /* box-shadow: 2px 2px 2px lightgray; */
 }
 
 img{
@@ -114,21 +126,62 @@ img:hover{
 }
 
 #side{
+  position: -webkit-sticky;
+  position: sticky;
+  width: 30px;
+  height: 40px;
+  top:25px;
+  left: 30px;
+  z-index: 2;
+  display: flex;
+  align-items: flex-start;
+  transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1); */
+
+    /* position: -webkit-sticky;
+    position: sticky;
     width: 200px;
-    background: rgb(22, 42, 95);
-    position: absolute;
+    padding: 3px;
     height: 395px;
-    left:-180px;
-    top:80px;
+    left:-100px;
+    top:0;
     border-radius: 5px;
     z-index: 1;
-    color: white;
+    color: gray;
     text-align: right;
-    writing-mode: vertical-rl;
-    text-orientation:upright;
-    transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1); */
 }
 
-#side:hover{
-    left:0px;
+/* #side:hover{
+  background: tomato;
+  width: 300px;
+
+} */
+
+/* .text{
+  background: rgb(22, 42, 95);
+  display: inline-block;
+  height: 70px;
+  width: 50px;
+  border-radius: 40%;
+  padding-top: 10px;
+} */
+
+#menu2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 15px;
+    transition: 1s;
+    margin-top: 10px;
+    transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+
+.bar2{
+    width: 30px;
+    height: 2px;
+    background: rgb(29, 28, 28);
+}
+
+#menu2:hover{
+    transform: rotate(-45deg);
 }
